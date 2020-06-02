@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>eGreet | Custom Greetings</title>
-</head>
-
-<body>
-    <div class="container-fluid container-one">
-        <div class="row one">
-            <div class="col-12 r-one__header">
-                <!-- div for navigation -->
-                <div class="col r-one__logo">
-                    <img src="img/egreet-logo-tp.png" alt="e-Greet logo" height="75">
-                </div>
-                <div class="col r-one__welcome">
-                    <h1>Welcome!</h1>
-                    <div class="account">
-                        <p id="register"><a href="#">Register</a></p>
-                        <p id="login"><a href="#">Login</a></p>
-                        <p id="logout"><a href="#">Logout</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<?php require_once 'inc/header.php'?>
         <div class="container-fluid container-two">
             <div class="row two">
                 <div class="col-sm-12 col-md-4 r-two__options">
@@ -87,8 +58,10 @@
                             background color</label>
                         <input data-color type="color" id="bg-color">
                     </div>
-                    <div class="url-buttons">
-                        <label for="controlbuttons"><span class="arrows">>></span> Generate URL and Save</label><br>
+
+                    <div class="control-btns" role="group">
+                        <label for="controlbuttons"><span class="arrows">>></span> Generate URL and Save</label>
+                        <br><br>
                         <button class="btn btn-outline-secondary controlbuttons">Save</button>
                         <button class="btn btn-outline-secondary controlbuttons">Share Your Card</button>
                     </div>
@@ -102,22 +75,4 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid container-three">
-            <div class="row">
-                <div class="col-12">
-                    <div class="container-three__footer">
-                        <p class="footer__credit">&copy; Created by Regina Pilipchuk</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/script.js"></script>
-    <!-- jQuery -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-</body>
-
-</html>
+        <?php require_once 'inc/footer.php'?>
