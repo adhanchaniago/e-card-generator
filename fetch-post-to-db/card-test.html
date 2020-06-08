@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Test</title>
+</head>
+<style>
+    #card {
+        height: 500px;
+        width: 500px;
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div id="card"></div>
+    <input type="color" id="myColor">
+    <button id="saveCard">Save my Card</button>
+
+    <script>
+        const color = document.querySelector("#myColor")
+        const card = document.querySelector("#card")
+        const saveCard = document.querySelector("#saveCard")
+
+        card.style.backgroundColor = localStorage.getItem("bg_color")
+
+        color.addEventListener("change", () => {
+            card.style.backgroundColor = color.value
+            localStorage.setItem("bg_color", color.value)
+            card.style.backgroundColor = localStorage.getItem("bg_color")
+        })
+
+        saveCard.addEventListener('click', saveToDB)
+
+
+        function saveToDB() {
+            // create a FormData object to append to
+            const selectedOptions = new FormData
+
+            // get localStorage options
+            const bg_color = localStorage.getItem("bg_color")
+            // console.log(bg_color)
+            selectedOptions.append("bg_color", bg_color)
+            // fetch post goes here
+            fetch('card-post.php', { method: 'post', body: selectedOptions })
+                .then(response => response.text())
+                .then(text => console.log(text))
+                .catch(err => console.error(err))
+        }
+    </script>
+</body>
+
+</html>
