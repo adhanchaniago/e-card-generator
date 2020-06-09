@@ -34,3 +34,9 @@ I think my major struggle is simply lack of experience. I'm very orderly when it
 I'm also learning a lot about the power of teamwork and how important and fruitful good communication can be. It's been a true pleasure working with Allison on this project!
 
 ### Allison
+
+This project has been really fun to wrap my brain around. I was surprised to end up as the backend person, but really pleased that I ended up working on that side more because I forgot how much I enjoy database work. I appreciate being able to talk things through with Regina and then utilizing zoom sessions with a higher helper to make sure we are on the right track and not getting lost in the possibilities of what we can do and the way we could do it. 
+
+I agree with Regina that it is hard to organize something when you don't really know how you're going to implement everything. I look forward to developing more of a process with developing my code in the future, as I feel like that is something that comes with time and experience. I really love to problem solve, but I also sometimes get frazzled at the "starting from scratch" option. Having another brain to come up with ideas is really a lovely experience. I had a great aha moment because of something she said and showed me as it made the database form in my head.
+
+I struggle with scaling down at the start, sometimes. I am often an idea person and then I get overwhelmed with all the things we could do and have to remind myself to focus on the first step, which Regina is great at. Seeing her approach and getting her feedback is phenomenal, because we get to improve ideas and build upon the ideas of the other person. Our regular meetings with Bruce/you have also been helpful to keep us focused on the project. 
