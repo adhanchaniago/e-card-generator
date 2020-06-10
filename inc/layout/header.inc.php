@@ -18,10 +18,10 @@
             <div class="col-12 r-one__header">
                 <!-- div for navigation -->
                 <div class="col r-one__logo">
-                    <img src="img/egreet-logo-tp.png" alt="e-Greet logo" height="75">
+                    <img src="img/egreet-no-bg.png" alt="e-Greet logo" height="75">
                 </div>
                 <div class="col r-one__welcome">
-                    <h1>Welcome!</h1>
+                    <h1 class="r-one__welcome">Welcome!</h1>
                     <div class="account">
                         <p id="register"><a href="#">Register</a></p>
                         <p id="login"><a href="#">Login</a></p>

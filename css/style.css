@@ -30,6 +30,10 @@ body {
     min-width: 400px;
 }
 
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
 /* unvisited link */
 
 a:link {
@@ -83,10 +87,11 @@ a:active {
 }
 
 #login, #logout, #register {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-left: 5px;
+    /* font-weight: 600; */
 }
 
 #logout {
@@ -144,7 +149,7 @@ input[type=color] {
     margin-top: 30px;
     background-color: var(--red-accent);
     border-color: var(--red-dark);
-    width: 100%;
+    /* width: 100%; */
     text-transform: uppercase;
     letter-spacing: 3px;
     padding: 10px;
@@ -241,4 +246,30 @@ input[type=color] {
         margin: 0;
         width: 100%;
     }
+}
+
+.col-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid var(--grey-light-tp);
+}
+
+.register__welcome-msg {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.register__cta {
+    padding-right: 1.5em;
+}
+
+.form-container {
+    background: var(--grey-light-tp);
+}
+
+#registration-form {
+    padding: 4em 4em;
 }
