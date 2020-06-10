@@ -1,7 +1,7 @@
 <?php // footer.inc.php
 
 ?>
-
+</div> <!-- end main-content div -->
     <div class="container-fluid container-three">
         <div class="row">
             <div class="col-12">

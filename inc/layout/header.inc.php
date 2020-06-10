@@ -13,20 +13,21 @@
 </head>
 
 <body>
-    <div class="container-fluid container-one">
-        <div class="row one">
-            <div class="col-12 r-one__header">
-                <!-- div for navigation -->
-                <div class="col r-one__logo">
-                    <img src="img/egreet-no-bg.png" alt="e-Greet logo" height="75">
-                </div>
-                <div class="col r-one__welcome">
-                    <h1 class="r-one__welcome">Welcome!</h1>
-                    <div class="account">
-                        <p id="register"><a href="#">Register</a></p>
-                        <p id="login"><a href="#">Login</a></p>
-                        <p id="logout"><a href="#">Logout</a></p>
+    <div class="main-content"> 
+        <div class="container-fluid container-one">
+            <div class="row one">
+                <div class="col-12 r-one__header">
+                    <!-- div for navigation -->
+                    <div class="col r-one__logo">
+                        <img src="img/egreet-no-bg.png" alt="e-Greet logo" height="75">
+                    </div>
+                    <div class="col r-one__welcome">
+                        <h1 class="r-one__welcome">Welcome!</h1>
+                        <div class="account">
+                            <p id="register"><a href="register.php">Register</a></p>
+                            <p id="login"><a href="login.php">Login</a></p>
+                            <p id="logout"><a href="">Logout</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
