@@ -22,11 +22,13 @@
                         <img src="img/egreet-no-bg.png" alt="e-Greet logo" height="75">
                     </div>
                     <div class="col r-one__welcome">
-                        <h1 class="r-one__welcome">Welcome!</h1>
+                        <!-- <h1 class="r-one__welcome">Welcome!</h1> -->
                         <div class="account">
                             <p id="register"><a href="register.php">Register</a></p>
                             <p id="login"><a href="login.php">Login</a></p>
                             <p id="logout"><a href="">Logout</a></p>
+                            <p class="card-gallery"><a href="card-gallery.php">Your Cards</a></p>
+                            <p class="editor"><a href="card-editor.php">New Card</a></p>
                         </div>
                     </div>
                 </div>

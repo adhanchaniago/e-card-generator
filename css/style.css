@@ -31,7 +31,7 @@ body {
 }
 
 .main-content {
-    height: 100vh;
+    min-height: 100%;
 }
 
 h1 {
@@ -79,6 +79,7 @@ a:active {
 
 .r-one__welcome {
     text-align: right;
+    margin-top: 1em;
 }
 
 .r-one__welcome h1 {
@@ -90,12 +91,12 @@ a:active {
     justify-content: flex-end;
 }
 
-#login, #logout, #register {
+#login, #logout, #register, .card-gallery, .editor {
     font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-left: 5px;
-    /* font-weight: 600; */
+    /* text-transform: uppercase; */
+    /* letter-spacing: 2px; */
+    margin-left: 1em;
+    font-weight: 600;
 }
 
 #logout {
@@ -150,7 +151,7 @@ input[type=color] {
 }
 
 .btn-dark {
-    margin-top: 30px;
+    margin-top: 1em;
     background-color: var(--red-accent);
     border-color: var(--red-dark);
     /* width: 100%; */
@@ -280,6 +281,33 @@ input[type=color] {
     padding: 4em 4em;
 }
 
-.login-container, .register-container {
+.login-container, .register-container, .container-app-info {
     margin-top: 3em;
+}
+
+.row-app-info {
+    display: flex;
+    /* background: grey; */
+    padding: 3em 3em;
+}
+
+.outline-btn {
+    background-color: white;
+    color: var(--red-accent);
+    border: 1px solid var(--red-accent);
+}
+
+.btn-app-info {
+    padding: 0.5em;
+    min-width: 170px;
+    margin: 5px 1em;
+}
+
+.btn-dark:hover, .btn-dark:active {
+    background-color: var(--red-dark);
+}
+
+.app-info-text {
+    border-right: 2px solid var(--grey-light-tp);
+    align-self: flex-end;
 }
