@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row">
         <div class="gallery">
-            <?php display_cards(); ?>
+            <?php //display_cards(); ?>
         </div>
     </div>
 </div>

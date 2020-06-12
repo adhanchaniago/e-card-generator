@@ -1,6 +1,6 @@
 const color = document.querySelector("#myColor")
 const card = document.querySelector("#card")
-const saveCard = document.querySelector("#saveCard")
+const saveBtn = document.querySelector("#saveCard")
 
 card.style.backgroundColor = localStorage.getItem("bg_color")
 
@@ -10,10 +10,10 @@ color.addEventListener("change", () => {
     card.style.backgroundColor = localStorage.getItem("bg_color")
 })
 
-saveCard.addEventListener('click', saveToDB)
+saveBtn.addEventListener('click', saveCard)
 
 
-function saveToDB() {
+function saveCard() {
     // create a FormData object to append to
     const selectedOptions = new FormData
 
@@ -28,5 +28,14 @@ function saveToDB() {
         .catch(err => console.error(err))
 }
 
+function getCard() {
+    fetch('./inc/process/gallery-builder.inc.php')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+}
+
+getCard()
 // area for card gallery
 

@@ -6,7 +6,10 @@ function display_cards() {
     if($link === false){
         die("ERROR: Could not connect." . mysqli_connect_error());
     }
+
     $gallerysql = "SELECT * FROM text";
+
+    $result = $link->query($gallerysql);
    
     echo json_encode($result->fetch_all(MYSQLI_ASSOC));
 
@@ -38,4 +41,6 @@ function display_cards() {
     // // Close connection
     mysqli_close($link); 
 }
+
+display_cards();
     

@@ -62,6 +62,14 @@ require_once "inc/layout/header.inc.php";
                         background color</label>
                     <input data-color type="color" id="bg-color">
                 </div>
+
+                <div class="control-btns" role="group">
+                    <label for="controlbuttons"><span class="arrows">>></span> You're ready to save and share!</label>
+                    <div>
+                        <button class="btn btn-dark controlbuttons">Save</button>
+                        <button class="btn btn-dark outline-btn controlbuttons">Share</button>
+                    </div>
+                </div>
             </div>
             <div class="editor-container col-sm-12 col-md-8">
                 <div id="editor" class="r-two__editor">
