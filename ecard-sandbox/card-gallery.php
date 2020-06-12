@@ -14,7 +14,8 @@
 <div class="container">
     <div class="row">
         <div class="gallery">
-            <?php //display_cards(); ?>
+            <button id="getCard">Saved Card</button>
+            <div id="savedCards">Saved cards show up in console for now</div>
         </div>
     </div>
 </div>
