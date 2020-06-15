@@ -24,25 +24,24 @@ if (isset($_GET['card'])) {
     // get matching row and save it as JSON object
     $result = $db->query($sql);
     // return JSON object
-    echo json_encode($result->fetch_all(MYSQLI_ASSOC));
+    // echo json_encode($result->fetch_all(MYSQLI_ASSOC));
     // $result->fetch_assoc();
     // print_r($result);
     // $result->fetch_all(MYSQLI_ASSOC);
 
-    // // Associative array
-    // $row = $result -> fetch_array(MYSQLI_ASSOC);
-    // printf ("%s (%s) %s\n", $row["textId"], $row["randomText"], $row["url"]);
+    // Associative array
+    $row = $result -> fetch_array(MYSQLI_ASSOC);
+    printf ("%s (%s) %s\n", $row["textId"], $row["randomText"], $row["url"]);
 
 
     // $bgColor = $row["randomText"];
     // print_r($result);
 } else {
-    // echo "Something went wrong";
-    echo json_encode(['error' => 'No card to share!']);
+    echo "No card to share";
+    // echo json_encode(['error' => 'No card to share!']);
 }
 ?>
 
 
-<script src="js/viewCard.js"></script>
 </body>
 </html>

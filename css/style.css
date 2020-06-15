@@ -155,10 +155,10 @@ input[type=color] {
     background-color: var(--red-accent);
     border-color: var(--red-dark);
     /* width: 100%; */
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    padding: 10px;
-    font-weight: 600;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 3px; */
+    /* padding: 10px; */
+    /* font-weight: 500; */
 }
 
 .btn-dark:hover, .btn-dark:active {
@@ -310,4 +310,12 @@ input[type=color] {
 .app-info-text {
     border-right: 2px solid var(--grey-light-tp);
     align-self: flex-end;
+}
+
+.call-to-action {
+    padding: 1em;
+}
+
+.call-to-action h1 {
+    font-size: 1.3rem;
 }
