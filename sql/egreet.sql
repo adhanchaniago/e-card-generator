@@ -31,7 +31,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `ecard` (
   `card_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `card_name` text NOT NULL,
   `greeting_id` int(11) NOT NULL,
   `greeting_color` varchar(6) NOT NULL,
   `custom_greeting` text NOT NULL,
@@ -72,7 +71,6 @@ INSERT INTO `greeting` (`greeting_id`, `greeting_option`) VALUES
 
 CREATE TABLE `template` (
   `template_id` int(11) NOT NULL,
-  `card_name` text NOT NULL,
   `greeting_id` int(11) NOT NULL,
   `greeting_color` varchar(6) NOT NULL,
   `custom_greeting` text NOT NULL,
@@ -114,7 +112,6 @@ INSERT INTO `user` (`user_id`, `username`, `first_name`, `last_name`, `email`, `
 --
 ALTER TABLE `ecard`
   ADD PRIMARY KEY (`card_id`),
-  ADD UNIQUE KEY `card_name` (`card_name`) USING HASH,
   ADD KEY `greeting_id` (`greeting_id`),
   ADD KEY `user_id` (`user_id`);
 
