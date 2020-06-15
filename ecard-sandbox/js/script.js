@@ -15,7 +15,7 @@ color.addEventListener("change", () => {
     card.style.backgroundColor = localStorage.getItem("bg_color")
 })
 
-function saveCard() {
+function saveAndShareCard() {
     // create a FormData object to append to
     const selectedOptions = new FormData
 
@@ -25,20 +25,15 @@ function saveCard() {
     selectedOptions.append("bg_color", bg_color)
     // fetch post goes here
     fetch('card-post.php', { method: 'post', body: selectedOptions })
-        .then(response => response.text())
-        .then(text => {
-            console.log(text)
-            if (text.status != 'ok') {
-                resultMsg.innerHTML = "<p>Card not saved - please try again.</p>"
-            }
-            else {
-                resultMsg.innerHTML = "<p>Card saved!</p>"
-            }
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            resultMsg.innerHTML = `<p>Link to share: ${data[0].url}</p>`
         })
         .catch(err => console.error(err))
 }
 
-function getCard() {
+function getAllCards() {
     // gets entire card table
     // need to do something similar for the template table
     fetch('./inc/process/gallery-builder.inc.php')
@@ -48,18 +43,17 @@ function getCard() {
         }).catch(err => console.error(err))
 }
 
-function shareCard() {
-    // may need to change fetch url path - one that queries just for the url col? 
-    fetch('./inc/process/gallery-builder.inc.php')
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-        }).catch(err => console.log("Couldn't fetch URL: " + err))
-}
-
-saveBtn.addEventListener('click', saveCard)
-getBtn.addEventListener('click', getCard)
-shareBtn.addEventListener('click', shareCard)
+// function shareCard() {
+//     // may need to change fetch url path - one that queries just for the url col? 
+//     fetch('./inc/process/get-card-url.inc.php')
+//         .then(res => res.json())
+//         .then(data => {
+//             console.log(data)
+//         }).catch(err => console.log("Couldn't fetch URL: " + err))
+// }
+saveBtn.addEventListener('click', saveAndShareCard)
+getBtn.addEventListener('click', getAllCards)
+// shareBtn.addEventListener('click', shareCard)
 
 // generate URL (by function that calls a fetch to get generated URL from DB?)
 
