@@ -33,10 +33,11 @@ CREATE TABLE `ecard` (
   `user_id` int(11) NOT NULL,
   `greeting_id` int(11) NOT NULL,
   `greeting_color` varchar(6) NOT NULL,
-  `custom_greeting` text NOT NULL,
+  `custom_greeting` varchar(600) NOT NULL,
   `message_color` varchar(6) NOT NULL,
-  `bg_image` text NOT NULL,
-  `bg_color` varchar(6) NOT NULL
+  `bg_image` varchar(600) NOT NULL,
+  `bg_color` varchar(6) NOT NULL,
+  `url` varchar (600)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -59,9 +60,7 @@ INSERT INTO `greeting` (`greeting_id`, `greeting_option`) VALUES
 (2, 'Get Well'),
 (3, 'Thinking of You'),
 (4, 'Thank You!'),
-(5, 'Shove Off!'),
-(6, 'Happy Anniversary!'),
-(7, 'Get Bent');
+(5, 'Happy Anniversary!');
 
 -- --------------------------------------------------------
 
@@ -73,10 +72,11 @@ CREATE TABLE `template` (
   `template_id` int(11) NOT NULL,
   `greeting_id` int(11) NOT NULL,
   `greeting_color` varchar(6) NOT NULL,
-  `custom_greeting` text NOT NULL,
+  `custom_greeting` varchar(600) NOT NULL,
   `message_color` varchar(6) NOT NULL,
-  `bg_image` text NOT NULL,
-  `bg_color` varchar(6) NOT NULL
+  `bg_image` varchar(600) NOT NULL,
+  `bg_color` varchar(6) NOT NULL,
+  `url` varchar (600)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
