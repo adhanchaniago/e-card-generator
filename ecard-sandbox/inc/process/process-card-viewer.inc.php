@@ -1,4 +1,5 @@
 <?php 
+// MUST BE INCLUDED ON card-viewer.inc.php
 if (isset($_GET['card'])) {
     // make db connection
     $db = new mysqli('localhost', 'root', '', 'test');
