@@ -1,9 +1,12 @@
 <?php // register.php
 $pageTitle = "Register"; 
 require_once "inc/layout/header.inc.php";
-require_once "inc/db/db-connect.inc.php";
-require_once "inc/process/process.register.inc.php"
-// session_start();
+session_start();
+
+echo'<div class="login-form-container">';
+    if (isset($_GET['message']) && $_GET['message'] == 'error') {
+        echo '<div class="alert alert-dark text-center"><strong>ALERT! There was an issue registering.</strong><br>You may need to select a new username or someone may have already registered with that email.<br>Please try again.</div>';
+    }
 ?>
 
 <div class="container-fluid register-container">

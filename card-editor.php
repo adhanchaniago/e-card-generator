@@ -1,6 +1,7 @@
 <?php // card-editor.php 
 $pageTitle = "Edit Your Card";
 require_once "inc/layout/header.inc.php";
+session_start();
 ?>
 
     <div class="container-fluid container-two">
