@@ -1,6 +1,9 @@
 <?php // register.php
 $pageTitle = "Register"; 
 require_once "inc/layout/header.inc.php";
+require_once "inc/db/db-connect.inc.php";
+require_once "inc/process/process.register.inc.php"
+// session_start();
 ?>
 
 <div class="container-fluid register-container">

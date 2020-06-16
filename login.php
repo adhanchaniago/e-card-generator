@@ -1,6 +1,9 @@
 <?php // login.php 
 $pageTitle = "Login";
 require_once "inc/layout/header.inc.php";
+require_once 'inc/db/db-connect.inc.php';
+require_once 'inc/process/process-login.inc.php';
+// session_start();
 ?>
 
 <div class="container-fluid login-container">
@@ -26,6 +29,7 @@ require_once "inc/layout/header.inc.php";
                 <div class="form-group">
                 <label for="password">Password</label>
                 <input class="form-control" type="password" id="password" required name="password">
+                <!-- <span id="showPassword" onclick="showPassword();">Show Password</span> -->
                 </div>
                 
                 <div class="form-group">
