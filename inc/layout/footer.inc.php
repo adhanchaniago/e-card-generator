@@ -13,8 +13,7 @@
         </div>
     </div>
 </div>
-    
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/functions.js"></script>
     <!-- jQuery -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap JavaScript -->

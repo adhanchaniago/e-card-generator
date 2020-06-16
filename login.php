@@ -1,9 +1,13 @@
 <?php // login.php 
 $pageTitle = "Login";
 require_once "inc/layout/header.inc.php";
-require_once 'inc/db/db-connect.inc.php';
-require_once 'inc/process/process-login.inc.php';
-// session_start();
+// require_once 'inc/process/process-login.inc.php';
+session_start();
+
+echo'<div class="login-form-container">';
+    if (isset($_GET['message']) && $_GET['message'] == 'registered') {
+        echo '<p class="alert alert-dark text-center">Account successfully created. Please login now.</p>';
+    }
 ?>
 
 <div class="container-fluid login-container">
