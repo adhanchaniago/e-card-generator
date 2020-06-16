@@ -75,8 +75,7 @@ CREATE TABLE `template` (
   `custom_greeting` varchar(600) NOT NULL,
   `message_color` varchar(6) NOT NULL,
   `bg_image` varchar(600) NOT NULL,
-  `bg_color` varchar(6) NOT NULL,
-  `url` varchar (600)
+  `bg_color` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
