@@ -35,8 +35,8 @@ CREATE TABLE `ecard` (
   `greeting_color` varchar(7) NOT NULL,
   `custom_greeting` varchar(600) NOT NULL,
   `message_color` varchar(7) NOT NULL,
-  `bg_image` varchar(600) NOT NULL,
-  `bg_color` varchar(7) NOT NULL,
+  `bg_image` varchar(600),
+  `bg_color` varchar(7),
   `url` varchar (600)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -74,8 +74,8 @@ CREATE TABLE `template` (
   `greeting_color` varchar(7) NOT NULL,
   `custom_greeting` varchar(600) NOT NULL,
   `message_color` varchar(7) NOT NULL,
-  `bg_image` varchar(600) NOT NULL,
-  `bg_color` varchar(7) NOT NULL,
+  `bg_image` varchar(600),
+  `bg_color` varchar(7),
   `template_url` varchar(600) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
