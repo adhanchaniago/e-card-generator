@@ -1,4 +1,4 @@
-// handles
+//#region handles
 
 // for editor
 const editor = document.querySelector('#editor')
@@ -13,11 +13,20 @@ const messageColor = document.querySelector("[data-color-msg]")
 const bgImage = document.querySelectorAll(".bg-image")
 const bgColor = document.querySelector("[data-color]")
 
+// for saving, sharing, displaying cards
+const saveAndShareBtn = document.querySelector("#saveAndShare")
+const shareURL = document.querySelector("#displayShareURL")
+
+
+//#endregion handles
+
+//#region editing (local storage) functionality
 
 // add event listeners to option
 // greeting
 greetingHandle.forEach(element => {
     element.addEventListener("click", () => {
+        localStorage.setItem("greetingID", element.value)
         localStorage.setItem("greeting", element.text)
         editorGreeting.innerHTML = `<h1>${localStorage.getItem("greeting")}</h1>`
     })
@@ -86,10 +95,57 @@ function displayStoredCard() {
         editor.style.backgroundColor = localStorage.getItem("bgColor")
     }
 }
+//#endregion editing (local storage) functionality
+
+//#region save/share functionality
+
+function saveAndShareCard() {
+    // create a form data object to store selected functions
+    const selectedOptions = new FormData
+
+    // get all local storage options
+    // append all options to form data object
+    if (storageItemIsNotNull("greetingID")) {
+        selectedOptions.append("greetingID", localStorage.getItem("greetingID"))
+    }
+
+    if (storageItemIsNotNull("greetingColor")) {
+        selectedOptions.append("greetingColor", localStorage.getItem("greetingColor"))
+    }
+
+    if (storageItemIsNotNull("customGreeting")) {
+        selectedOptions.append("customGreeting", localStorage.getItem("customGreeting"))
+    }
+
+    if (storageItemIsNotNull("messageColor")) {
+        selectedOptions.append("messageColor", localStorage.getItem("messageColor"))
+    }
+
+    if (storageItemIsNotNull("bgImage")) {
+        selectedOptions.append("bgImage", localStorage.getItem('bgImage'))
+    }
+
+    if (storageItemIsNotNull("bgColor")) {
+        selectedOptions.append("bgColor", localStorage.getItem("bgColor"))
+    }
+
+    // use fetch to post data to PHP
+    fetch('./inc/process/process-card-editor.inc.php', { method: 'post', body: selectedOptions })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            shareURL.innerText = `Copy & Send this Link to Share Your Card: ${data[0].url}`
+        })
+        .catch(err => console.error(err))
+}
+
+//#endregion save/display functionality
 
 // helper functions
 function storageItemIsNotNull(item) {
     return localStorage.getItem(`${item}`) !== null
 }
 
+// function calls
 displayStoredCard()
+saveAndShareBtn.addEventListener("click", saveAndShareCard)

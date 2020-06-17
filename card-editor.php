@@ -7,14 +7,14 @@ session_start();
     <div class="container-fluid container-two">
         <div class="row two">
             <div class="col-sm-12 col-md-4 r-two__options">
-                <div class="form-group">
+            <div class="form-group">
                     <label for="greeting"><span class="arrows">>></span> Select a greeting</label>
                     <select data-greeting multiple class="form-control" id="greeting">
-                        <option class="greeting-option" value="happy-birthday">Happy Birthday!</option>
-                        <option class="greeting-option" value="get-well">Get Well</option>
-                        <option class="greeting-option" value="thinking">Thinking of You</option>
-                        <option class="greeting-option" value="thank-you">Thank you!</option>
-                        <option class="greeting-option" value="happy-anniversary">Happy Anniversary!</option>
+                        <option class="greeting-option" value="1">Happy Birthday!</option>
+                        <option class="greeting-option" value="2">Get Well</option>
+                        <option class="greeting-option" value="3">Thinking of You</option>
+                        <option class="greeting-option" value="4">Thank you!</option>
+                        <option class="greeting-option" value="5">Happy Anniversary!</option>
                     </select>
                 </div>
 
@@ -67,8 +67,10 @@ session_start();
                 <div class="control-btns" role="group">
                     <label for="controlbuttons"><span class="arrows">>></span> You're ready to save and share!</label>
                     <div>
-                        <button class="btn btn-dark controlbuttons">Save</button>
-                        <button class="btn btn-dark outline-btn controlbuttons">Share</button>
+                        <button id="saveAndShare" class="btn btn-dark controlbuttons">Save & Share</button>
+                        <div class="share-url-container">
+                            <p id="displayShareURL"></p>
+                        </div>
                     </div>
                 </div>
             </div>
