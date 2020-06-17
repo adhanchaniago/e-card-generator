@@ -32,11 +32,11 @@ CREATE TABLE `ecard` (
   `card_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `greeting_id` int(11) NOT NULL,
-  `greeting_color` varchar(6) NOT NULL,
+  `greeting_color` varchar(7) NOT NULL,
   `custom_greeting` varchar(600) NOT NULL,
-  `message_color` varchar(6) NOT NULL,
-  `bg_image` varchar(600) NOT NULL,
-  `bg_color` varchar(6) NOT NULL,
+  `message_color` varchar(7) NOT NULL,
+  `bg_image` varchar(600),
+  `bg_color` varchar(7),
   `url` varchar (600)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -71,11 +71,12 @@ INSERT INTO `greeting` (`greeting_id`, `greeting_option`) VALUES
 CREATE TABLE `template` (
   `template_id` int(11) NOT NULL,
   `greeting_id` int(11) NOT NULL,
-  `greeting_color` varchar(6) NOT NULL,
+  `greeting_color` varchar(7) NOT NULL,
   `custom_greeting` varchar(600) NOT NULL,
-  `message_color` varchar(6) NOT NULL,
-  `bg_image` varchar(600) NOT NULL,
-  `bg_color` varchar(6) NOT NULL
+  `message_color` varchar(7) NOT NULL,
+  `bg_image` varchar(600),
+  `bg_color` varchar(7),
+  `template_url` varchar(600) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -172,13 +173,15 @@ ALTER TABLE `user`
 --
 ALTER TABLE `ecard`
   ADD CONSTRAINT `ecard_ibfk_1` FOREIGN KEY (`greeting_id`) REFERENCES `greeting` (`greeting_id`),
-  ADD CONSTRAINT `ecard_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+  ADD CONSTRAINT `ecard_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  ADD UNIQUE KEY `url` (`url`);
 
 --
 -- Constraints for table `template`
 --
 ALTER TABLE `template`
-  ADD CONSTRAINT `template_ibfk_1` FOREIGN KEY (`greeting_id`) REFERENCES `greeting` (`greeting_id`);
+  ADD CONSTRAINT `template_ibfk_1` FOREIGN KEY (`greeting_id`) REFERENCES `greeting` (`greeting_id`),
+  ADD UNIQUE KEY `template_url` (`template_url`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
