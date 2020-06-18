@@ -19,7 +19,7 @@ echo'<div class="login-form-container">';
                 <div>
                     <h1>Hi there!</h1>
                     <h2>Let's set up an account.</h2>
-                    <p>Already have one? <a href="login.php">Log in.</a></p>
+                    <p>Already have one? <a href="login.php">Log in</a></p>
                 </div>
             </div>
         </div>
