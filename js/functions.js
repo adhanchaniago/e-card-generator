@@ -11,6 +11,15 @@ function showPassword() {
     }
 }
 
+function clearLocalStorage() {
+    alert("Are you sure you want to clear this card?")
+    localStorage.clear()
+    location.reload()
+}
+
+function clearLocalStorageOnLogout() {
+    localStorage.clear()
+}
 // is the user logged in or not?
 fetch('helper/is_logged_in.php')
     .then(res => res.json())

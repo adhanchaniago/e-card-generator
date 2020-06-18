@@ -6,6 +6,7 @@ const editorGreeting = document.querySelector('#editor-greeting')
 const editorMessage = document.querySelector('#editor-message')
 
 // for event listeners
+const cardName = document.querySelector("#card-name")
 const greetingHandle = document.querySelectorAll(".greeting-option")
 const greetingColor = document.querySelector("[data-color-greet]")
 const customGreeting = document.querySelector("[data-custom-greeting]")
@@ -24,6 +25,10 @@ const shareURL = document.querySelector("#displayShareURL")
 
 // add event listeners to option
 // greeting
+cardName.addEventListener("keyup", () => {
+    localStorage.setItem("cardName", cardName.value)
+})
+
 greetingHandle.forEach(element => {
     element.addEventListener("click", () => {
         localStorage.setItem("greetingID", element.value)
@@ -76,6 +81,8 @@ function displayStoredCard() {
 
     if (storageItemIsNotNull("greetingColor")) {
         editorGreeting.style.color = localStorage.getItem("greetingColor")
+    } else {
+        localStorage.setItem("greetingColor", "#000000")
     }
 
     if (storageItemIsNotNull("customGreeting")) {
@@ -85,6 +92,8 @@ function displayStoredCard() {
 
     if (storageItemIsNotNull("messageColor")) {
         editorMessage.style.color = localStorage.getItem("messageColor")
+    } else {
+        localStorage.setItem("messageColor", "#000000")
     }
 
     if (storageItemIsNotNull("bgImage")) {
@@ -105,6 +114,10 @@ function saveAndShareCard() {
 
     // get all local storage options
     // append all options to form data object
+    if (storageItemIsNotNull("cardName")) {
+        selectedOptions.append("cardName", localStorage.getItem("cardName"))
+    }
+
     if (storageItemIsNotNull("greetingID")) {
         selectedOptions.append("greetingID", localStorage.getItem("greetingID"))
     }

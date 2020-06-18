@@ -23,7 +23,7 @@ echo'<div class="login-form-container">';
             </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 form-container">
-            <form action="" method="POST" id="registration-form">
+            <form action="inc/process/process-register.inc.php" method="POST" id="registration-form">
                 <div class="form-group">
                 <label for="first_name">First Name</label>
                 <input class="form-control" type="text" id="first_name" required name="first_name"></div>
@@ -47,6 +47,7 @@ echo'<div class="login-form-container">';
                 <div class="form-group">
                 <label for="password">Password</label>
                 <input class="form-control" type="password" id="password" required name="password">
+                <span id="showPassword" onclick="showPassword();">Show Password</span>
                 </div>
                 
                 <div class="form-group">

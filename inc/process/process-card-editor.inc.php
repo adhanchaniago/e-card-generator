@@ -4,6 +4,8 @@ session_start();
 
 // get a handle on all the form data passed in through fetch
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    // $cardName = $_POST['cardName'];
+    isset($_POST['cardName']) ? $cardName = $_POST['cardName'] : $cardName = "Untitled" . uniqid();
     $greetingID = $_POST['greetingID'];
     $greetingColor = $_POST['greetingColor'];
     $customGreeting = $_POST['customGreeting'];
@@ -29,8 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $link = preg_replace($pattern, $replacement, $link);
         
     // save to DB
-    $sql = "INSERT INTO `ecard` (`user_id`, `greeting_id`, `greeting_color`, `custom_greeting`, `message_color`, `bg_image`, `bg_color`, `url`)
-            VALUES ($userID, $greetingID, '$greetingColor', '$customGreeting', '$messageColor', '$bgImage', '$bgColor', '$link')";
+    $sql = "INSERT INTO `ecard` (`user_id`, `greeting_id`, `greeting_color`, `custom_greeting`, `message_color`, `bg_image`, `bg_color`, `url`, `card_name`)
+            VALUES ($userID, $greetingID, '$greetingColor', '$customGreeting', '$messageColor', '$bgImage', '$bgColor', '$link', '$cardName')";
 
     $result = $db->query($sql);
 
