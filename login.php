@@ -24,7 +24,7 @@ echo'<div class="login-form-container">';
             </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 form-container">
-            <form action="inc/process/process-login.inc.php" method="POST" id="registration-form">
+            <form action="inc/process/process-login.inc.php" method="POST" id="login-form">
                 <div class="form-group">
                 <label for="username">Username</label>
                 <input class="form-control registration-username" type="text" id="username" required name="username">
@@ -33,7 +33,7 @@ echo'<div class="login-form-container">';
                 <div class="form-group">
                 <label for="password">Password</label>
                 <input class="form-control" type="password" id="password" required name="password">
-                <span id="showPassword" onclick="showPassword();">Show Password</span>
+                <p id="showPassword" onclick="showPassword();">Show Password</p>
                 </div>
                 
                 <div class="form-group">
@@ -43,6 +43,5 @@ echo'<div class="login-form-container">';
         </div>
     </div>
 </div>
-
 
 <?php require_once "inc/layout/footer.inc.php"; ?>

@@ -30,9 +30,9 @@ body {
     min-width: 400px;
 }
 
-.main-content {
-    min-height: 100%;
-}
+/* .main-content {
+    height: 100vh;
+} */
 
 h1 {
     font-family: 'Shrikhand', cursive;
@@ -175,9 +175,11 @@ input[type=color] {
 
 .container-three__footer {
     /* border-top: 0.5px solid var(--grey-light); */
-    padding-top: 5px;
+    /* padding-top: 5px; */
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .footer__credit {
@@ -228,31 +230,6 @@ input[type=color] {
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    .r-two__options {
-        border-right: 2px solid var(--grey-light-tp);
-        padding-right: 2em;
-        border-bottom-style: none;
-    }
-    #editor {
-        height: 100%;
-        padding: 0;
-        margin-top: 0;
-    }
-    #editor-greeting h1 {
-        font-size: 5rem;
-    }
-    #editor-message p {
-        font-weight: 600;
-        font-size: 1.2rem;
-    }
-    #editor-message {
-        padding: 3.5em 6.5em 3em 6.5em;
-        margin: 0;
-        width: 100%;
-    }
-}
-
 .col-msg {
     display: flex;
     align-items: center;
@@ -277,7 +254,7 @@ input[type=color] {
     margin: auto;
 }
 
-#registration-form {
+#registration-form, #login-form {
     padding: 4em 4em;
 }
 
@@ -318,4 +295,53 @@ input[type=color] {
 
 .call-to-action h1 {
     font-size: 1.3rem;
+}
+
+[data-username] {
+    display: none;
+}
+
+.bad-username {
+    display: inline;
+    margin-left: 0.25em;
+    color: red;
+    font-size: 0.7rem;
+}
+
+#showPassword {
+    text-align: right;
+    font-size: 0.7rem;
+    text-decoration: underline;
+}
+
+.user-greet {
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 0 0 1em 0;
+    color: var(--red-accent);
+}
+
+@media (min-width: 768px) {
+    .r-two__options {
+        border-right: 2px solid var(--grey-light-tp);
+        padding-right: 2em;
+        border-bottom-style: none;
+    }
+    #editor {
+        height: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+    #editor-greeting h1 {
+        font-size: 5rem;
+    }
+    #editor-message p {
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    #editor-message {
+        padding: 3.5em 6.5em 3em 6.5em;
+        margin: 0;
+        width: 100%;
+    }
 }

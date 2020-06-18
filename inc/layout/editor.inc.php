@@ -1,6 +1,7 @@
 <div class="container-fluid container-two">
     <div class="row two">
         <div class="col-sm-12 col-md-4 r-two__options">
+        <h1 class="user-greet editor">Hello, <?= $_SESSION['first_name'];?>!</h1>
         <div class="form-group">
             <label for="card-name"><span class="arrows">>></span> Name Your Card</label>
             <input type="text" id="card-name" class="form-control" maxlenght="20" required>

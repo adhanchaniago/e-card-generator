@@ -28,8 +28,9 @@
                             <p id="login"><a href="login.php">Login</a></p>
                             <p id="logout"><a href="" onclick="clearLocalStorageOnLogout()">Logout</a></p>
                             <p class="card-gallery" id="card-gallery-btn"><a href="card-gallery.php">Your Cards</a></p>
-                            <p class="editor" id="card-editor-btn"><a href="card-editor.php" onclick="clearLocalStorage()">New Card</a></p>
+                            <p class="editor" id="card-editor-btn"><a href="card-editor.php" onclick="clearLocalStorageOnLogout()">New Card</a></p>
                         </div>
                     </div>
                 </div>
             </div>
+

@@ -6,8 +6,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="container-three__footer">
-                    <p class="footer__credit">&copy; 2020</p>
-                    <p class="footer__credit-sm">Created by Allison Drake and Regina Pilipchuk</p>
+                    <p class="footer__credit-sm">&copy; 2020 | Created by Allison Drake and Regina Pilipchuk</p>
+                    <!-- <p class="footer__credit">&copy; 2020</p> -->
                 </div>
             </div>
         </div>
