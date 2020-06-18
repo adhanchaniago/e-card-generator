@@ -37,7 +37,8 @@ CREATE TABLE `ecard` (
   `message_color` varchar(7) NOT NULL,
   `bg_image` varchar(600),
   `bg_color` varchar(7),
-  `url` varchar (600)
+  `url` varchar (600),
+  `card_name` varchar (20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -174,7 +175,8 @@ ALTER TABLE `user`
 ALTER TABLE `ecard`
   ADD CONSTRAINT `ecard_ibfk_1` FOREIGN KEY (`greeting_id`) REFERENCES `greeting` (`greeting_id`),
   ADD CONSTRAINT `ecard_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
-  ADD UNIQUE KEY `url` (`url`);
+  ADD UNIQUE KEY `url` (`url`),
+  ADD UNIQUE KEY `card_name`;
 
 --
 -- Constraints for table `template`
