@@ -68,9 +68,7 @@
                 <div>
                     <button id="saveAndShare" class="btn btn-dark controlbuttons">Save & Share</button>
                     <button id="clearCard" class="btn btn-dark controlbuttons outline-btn" onclick="clearLocalStorage()">Clear Card</button>
-                    <div class="share-url-container">
-                        <p id="displayShareURL"></p>
-                    </div>
+                    <div class="share-url-container"></div>
                 </div>
             </div>
         </div>

@@ -200,6 +200,14 @@ input[type=color] {
     border: 1px solid red;
 }
 
+.editor-container {
+    min-height: 800px;
+}
+
+.card-viewer-container {
+    padding: 0 3em;
+}
+
 #editor {
     display: flex;
     flex-direction: column;
@@ -210,6 +218,7 @@ input[type=color] {
     margin-top: 25px;
     padding: 5em 0;
     width: 100%;
+    max-width: 1200px;
     background-position: center;
     object-fit: cover;
 }
@@ -218,6 +227,14 @@ input[type=color] {
     display: block;
     padding: 2.5em 3em 2em 3em;
     font-weight: 700;
+    background-color: var(--grey-dark-tp);
+}
+
+.viewer__custom-greeting {
+    display: block;
+    margin-top: -70px;
+    padding: 2.5em 3em 2em 3em;
+    width: 100%;
 }
 
 #editor-greeting h1 {
@@ -319,6 +336,16 @@ input[type=color] {
     font-size: 2rem;
     margin: 0 0 1em 0;
     color: var(--red-accent);
+}
+
+.saveAndShareSuccess {
+    margin: 1em 0;
+    padding: 0.25em 0.5em;
+    /* color: var(--red-dark); */
+    background: var(--grey-light-tp);
+    border: 1px solid var(--red-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 @media (min-width: 768px) {

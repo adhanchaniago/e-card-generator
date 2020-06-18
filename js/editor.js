@@ -16,7 +16,9 @@ const bgColor = document.querySelector("[data-color]")
 
 // for saving, sharing, displaying cards
 const saveAndShareBtn = document.querySelector("#saveAndShare")
-const shareURL = document.querySelector("#displayShareURL")
+const saveAndShareContainer = document.querySelector(".share-url-container")
+// const shareURL = document.querySelector("#displayShareURL")
+// const saveSuccess = document.querySelector("#displaySuccessMessage")
 
 
 //#endregion handles
@@ -88,6 +90,8 @@ function displayStoredCard() {
     if (storageItemIsNotNull("customGreeting")) {
         editorMessage.style.backgroundColor = "rgba(115, 115, 115, 0.35)"
         editorMessage.innerHTML = `<p>${localStorage.getItem("customGreeting")}</p>`
+    } else {
+        editorMessage.style.backgroundColor = "transparent"
     }
 
     if (storageItemIsNotNull("messageColor")) {
@@ -147,7 +151,11 @@ function saveAndShareCard() {
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            shareURL.innerText = `Copy & Send this Link to Share Your Card: ${data[0].url}`
+            saveAndShareContainer.classList.add("saveAndShareSuccess")
+            saveAndShareContainer.innerHTML =
+                `<p id="displaySuccessMessage">Card Saved Successfully.</p>
+                 <p id="displayShareURL">Copy & Share: <a href="${data[0].url}">${data[0].url}</a></p>
+                 <p>Click "Clear Card" to start a new card.</p>`
         })
         .catch(err => console.error(err))
 }
