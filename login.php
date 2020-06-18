@@ -8,6 +8,9 @@ echo'<div class="login-form-container">';
     if (isset($_GET['message']) && $_GET['message'] == 'registered') {
         echo '<p class="alert alert-dark text-center">Account successfully created. Please login now.</p>';
     }
+    if (isset($_GET["message"]) && $_GET["message"] == 'error') {
+        echo '<div class="alert alert-dark text-center"><strong>There was a problem logging in.<br>Please try again or</strong><br><a class="nav-link active" id="registerbtn" href="register.php"><button type="button" class="btn btn-dark">Register</button></a></div>';
+    }
 ?>
 
 <div class="container-fluid login-container">

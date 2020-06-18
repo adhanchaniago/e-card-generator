@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: ../../card-editor.php");
 
     } else {
-        echo '<div class="alert alert-dark text-center"><strong>There was a problem logging in.<br>Please try again or</strong><br><a class="nav-link active" id="registerbtn" href="registration.php"><button type="button" class="btn btn-block btn-info">Register</button></a></div>';
+        header("Location: ../../login.php?message=error");
     }
 }
 ?>

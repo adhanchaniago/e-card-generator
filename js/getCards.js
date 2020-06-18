@@ -7,7 +7,14 @@ function getAllCards() {
             console.log(data)
             let output = ''
             for (let i = 0; i < data.length; i++) {
-                output += `<li>Card Name: <b>${data[i].card_name}</b> <br>Share Link: <a href="${data[i].url}">${data[i].url}</a></li>`
+                output +=
+                    `<div class="card mt-2" style="width: 30rem">
+                        <div class="card-body">
+                            <h2 class="card-title"><b>${data[i].card_name}</b></h2>
+                            <p class="card-text">Share Link: <a href="${data[i].url}">${data[i].url}</a></p>
+                            <a class="btn btn-dark btn-block btn-gallery text-white" href="${data[i].url}">View Card</a>
+                        </div>
+                    </div>`
             }
             cardURL.innerHTML = output
         })

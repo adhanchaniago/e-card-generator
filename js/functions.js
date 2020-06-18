@@ -12,7 +12,8 @@ function showPassword() {
 }
 
 function clearLocalStorage() {
-    alert("Are you sure you want to clear this card?")
+    // will add confirmation message soon
+    // alert("Are you sure you want to clear this card?")
     localStorage.clear()
     location.reload()
 }

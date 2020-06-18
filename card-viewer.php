@@ -11,29 +11,13 @@ function setBackground($bgColor, $bgImage) {
         echo "background-image:url({$bgImage});";
     }
 }
+
+if (isset($_GET['card'])) {
+    require_once "inc/layout/card-preview.inc.php";
+}
 ?>
 
-<div class="container-fluid container-two">
-    <div class="row two">
-        <div class="col-sm-12 col-md-3 r-two__options">
-            <div class="call-to-action">
-                <h1>Want to make your own card?</h1>
-                <p>eGreet allows you to build your own custom cards.</p>
-                <a href="card-editor.php"><button class="btn btn-dark btn-cta">Send A Card</button></a>
-            </div>
-        </div>
-        <div class="editor-container card-viewer-container col-sm-12 col-md-9">
-            <div style="<?php setBackground($row['bg_color'], $row['bg_image']); ?>" id="editor" class="r-two__editor">
-                <div id="editor-greeting" class="editor__greeting">
-                    <h1 style="color:<?=$row['greeting_color']?>;" class="viewer__greeting"><?=$row['greeting_option']?></h1>
-                </div>
-                <div id="editor-message" class="viewer__custom-greeting-container">
-                        <p class="viewer__custom-greeting" style="color:<?=$row['message_color']?>;"><?=$row['custom_greeting']?></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 
 <?php require_once "inc/layout/footer.inc.php"; ?>

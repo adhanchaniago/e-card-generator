@@ -301,6 +301,10 @@ input[type=color] {
     background-color: var(--red-dark);
 }
 
+.btn-gallery a:link {
+    color: white;
+}
+
 .app-info-text {
     border-right: 2px solid var(--grey-light-tp);
     align-self: flex-end;
@@ -346,6 +350,17 @@ input[type=color] {
     border: 1px solid var(--red-dark);
     font-size: 0.8rem;
     font-weight: 600;
+}
+
+.user-gallery {
+    margin: 0 auto;
+}
+
+#cardURL {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 @media (min-width: 768px) {

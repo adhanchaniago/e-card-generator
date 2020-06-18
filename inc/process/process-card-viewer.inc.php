@@ -23,7 +23,7 @@ if (isset($_GET['card'])) {
     $row = $result->fetch_array(MYSQLI_ASSOC);
 
 } else {
-    echo "No card to view.";
+    echo '<h1 class="mt-5">No card to view.</h1>';
 }
 
 ?>
