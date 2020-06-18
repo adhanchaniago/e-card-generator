@@ -24,7 +24,7 @@
                     <div class="col r-one__welcome">
                         <!-- <h1 class="r-one__welcome">Welcome!</h1> -->
                         <div class="account">
-                            <p id="register"><a href="register.php">Register</a></p>
+                            <p id="register"><a href="egreet.php">Register</a></p>
                             <p id="login"><a href="login.php">Login</a></p>
                             <p id="logout"><a href="" onclick="clearLocalStorageOnLogout()">Logout</a></p>
                             <p class="card-gallery" id="card-gallery-btn"><a href="card-gallery.php">Your Cards</a></p>

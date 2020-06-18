@@ -1,4 +1,4 @@
-<?php // register.php
+<?php // egreet.php >> registration/home page 
 $pageTitle = "Register"; 
 require_once "inc/layout/header.inc.php";
 session_start();

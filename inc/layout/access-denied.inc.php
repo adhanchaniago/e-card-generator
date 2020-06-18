@@ -6,7 +6,7 @@
         </div>
         <div class="col-6 app-info-">
             <div><a href="login.php"><button class="btn btn-dark outline-btn btn-app-info">Login</button></a></div>
-            <div><a href="register.php"><button class="btn btn-dark btn-app-info">Register</button></a></div>
+            <div><a href="egreet.php"><button class="btn btn-dark btn-app-info">Register</button></a></div>
         </div>
     </div>
 </div>

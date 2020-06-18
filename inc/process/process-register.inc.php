@@ -13,7 +13,7 @@ require_once '../db/db-connect.inc.php';
         $result = $db->query($sql);
 
         if (!$result) {
-            header("Location: ../../register.php?message=error");
+            header("Location: ../../egreet.php?message=error");
         } else {
             header("Location: ../../login.php?message=registered");
 
